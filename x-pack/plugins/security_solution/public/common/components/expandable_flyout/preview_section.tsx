@@ -37,11 +37,11 @@ export const PreviewSection: React.FC<PreviewSectionProps> = ({
 }: PreviewSectionProps) => {
   const dispatch = useDispatch();
   const closePreviewPanel = useCallback(
-    () => dispatch(closeSecurityFlyoutPreviewPanel({ scope: '' })), // TODO figure out how to retrieve the scope
+    () => dispatch(closeSecurityFlyoutPreviewPanel({ scope: 'global' })), // TODO figure out how to retrieve the scope
     [dispatch]
   );
   const previousPreviewPanel = useCallback(
-    () => dispatch(previousSecurityFlyoutPreviewPanel({ scope: '' })), // TODO figure out how to retrieve the scope
+    () => dispatch(previousSecurityFlyoutPreviewPanel({ scope: 'global' })), // TODO figure out how to retrieve the scope
     [dispatch]
   );
 

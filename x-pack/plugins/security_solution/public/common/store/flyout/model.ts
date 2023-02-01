@@ -5,7 +5,23 @@
  * 2.0.
  */
 
-export type SecurityFlyoutPanel = Record<string | number, never>; // Empty object
+import type {
+  Left2Panel,
+  LeftPanel,
+  Preview2Panel,
+  PreviewPanel,
+  Right2Panel,
+  RightPanel,
+} from './panel-model';
+
+export type SecurityFlyoutPanel =
+  | LeftPanel
+  | Left2Panel
+  | RightPanel
+  | Right2Panel
+  | PreviewPanel
+  | Preview2Panel
+  | Record<string | number, never>; // Empty object
 
 export interface SecurityFlyoutLayout {
   left: SecurityFlyoutPanel;

@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ExpandableFlyoutProvider } from './context';
 import { closeSecurityFlyout, selectFlyoutLayout } from '../common/store/flyout/reducers';
 import { ExpandableFlyout } from '../common/components/expandable_flyout';
+// eslint-disable-next-line @kbn/imports/no_boundary_crossing
+import { expandableFlyoutPanels } from './test/panels';
 
 export interface SecurityFlyoutProps {
   /**
@@ -48,7 +50,7 @@ export const SecurityFlyout = React.memo(
 
     return (
       <ExpandableFlyoutProvider close={close} layout={flyouts} scope={scope}>
-        <ExpandableFlyout className={className} panels={[]} onClose={close} />
+        <ExpandableFlyout className={className} panels={expandableFlyoutPanels} onClose={close} />
       </ExpandableFlyoutProvider>
     );
   }

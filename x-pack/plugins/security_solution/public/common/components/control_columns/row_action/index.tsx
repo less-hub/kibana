@@ -103,6 +103,13 @@ const RowActionComponent = ({
       dispatch(
         openSecurityFlyout({
           scope: 'global',
+          right: {
+            id: 'right',
+            params: {
+              id: '',
+              indexName,
+            },
+          },
         })
       );
     } else {

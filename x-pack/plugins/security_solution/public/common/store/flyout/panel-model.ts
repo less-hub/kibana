@@ -23,3 +23,49 @@ export interface SecurityFlyoutPanel {
    */
   state?: Record<string, unknown>;
 }
+export interface RightPanel extends SecurityFlyoutPanel {
+  id: 'right';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
+export interface Right2Panel extends SecurityFlyoutPanel {
+  id: 'right2';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
+
+export interface LeftPanel extends SecurityFlyoutPanel {
+  id: 'left';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
+
+export interface Left2Panel extends SecurityFlyoutPanel {
+  id: 'left2';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
+
+export interface PreviewPanel extends SecurityFlyoutPanel {
+  id: 'preview';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
+
+export interface Preview2Panel extends SecurityFlyoutPanel {
+  id: 'preview2';
+  params?: {
+    id: string;
+    indexName: string;
+  };
+}
